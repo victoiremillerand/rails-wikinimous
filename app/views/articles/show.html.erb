@@ -1,0 +1,9 @@
+<div class="container">
+  <div>
+    <h2><%= @article.title %></h2>
+    <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, article_path(@article.id), method: :delete,
+        data: { confirm: "Are you sure?" } %>
+    <%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe,edit_article_path %>
+  </div>
+  <p><%= @article.content %></p>
+</div>
